@@ -1,55 +1,83 @@
 # Game Of Life
 
-An implementation of John Conway's Game of Life in C++ using SDL2 for rendering.
+An implementation of John Conway's Game of Life in C++ using SDL2 for rendering.  
+
+![Gospers_Glider](assets/Gospers_glider_gun.gif)  
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Usage](#usage)
-4. [Dependencies](#dependencies)
-5. [Future Development](#future-development)
-6. [SDL2 Installation](#sdl2-installation)
+- [Game Of Life](#game-of-life)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Possible Shapes](#possible-shapes)
+  - [Usage](#usage)
+  - [Dependencies](#dependencies)
+  - [Future Development](#future-development)
+  - [SDL2-Installation](#sdl2-installation)
     - [Windows](#windows)
     - [macOS](#macos)
     - [Linux (Ubuntu/Debian)](#linux-ubuntudebian)
     - [Other Linux Distributions](#other-linux-distributions)
-8. [License](#license)
+  - [License](#license)
 
 ## Overview
 
 The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor or any other Turing machine.  
 
-The game works on the following simple rules :- 
+The game works on the following simple rules :-
+
 - Any live cell with two or three live neighbours survives.
 - Any dead cell with three live neighbours becomes a live cell- .
 - All other live cells die in the next generation. Similarly-ll other dead cells stay dead.
- 
+
 ## Features
 
 - Random generation of initial patterns.
 - Visualization of each generation using SDL2.
 - Customizable screen dimensions (SCREEN_HEIGHT and SCREEN_WIDTH constants in the code).
 
+## Possible Shapes
+
+|Static Shapes|Oscillators|Spaceships|
+|---|---|---|
+|![Block](assets/block.png)|![Blinker](assets/Game_of_life_blinker.gif)|![Glider](assets/Game_of_life_animated_glider.gif)|
+|Block|Blinker|Glider|
+|![Bee-Hive](assets/beehive.png) |![Toad](assets/Game_of_life_toad.gif)|![Light Weight Sapceship (LWSS)](assets/Game_of_life_animated_LWSS.gif)|
+|Bee-Hive|Toad|Light Weight Sapceship|
+|![Loaf](assets/loaf.png) |![Beacon](assets/Game_of_life_beacon.gif) |![Medium Weight Sapceship (MWSS)](assets/Game_of_life_animated_MWSS.gif)|
+|Loaf|Beacon|Medium Weight Sapceship|
+|![Boat](assets/boat.png)|![Pulsar](assets/Game_of_life_pulsar.gif) |![Heavy Weight Sapceship (HWSS)](assets/Game_of_life_animated_HWSS.gif)|
+|Boat|Pulsar|Heavy Weight Sapceship|
+|![Tub](assets/tub.png)|![Pentadecathlon](assets/Game_of_life_pentadecathlon.gif)||
+|Tub|Pentadecathlon||
+
 ## Usage
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/your-username/GameOfLife.git
 ```
+
 2. Compile the code using your preferred C++ compiler.
+
 ```bash
 g++ -std=c++20 <your-file-name>.cpp -o <your-output-file> -lSDL2  
 ```
+
 3. Run the executable.
+
 ```bash
 ./<your-output-file>
 ```
 
 ## Dependencies
+
 SDL2: Simple DirectMedia Layer is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, and display.
 
 ## Future Development
+
 - Optimize code for better cache utilization.
 - Implement a terminal version of the Game of Life.
 
